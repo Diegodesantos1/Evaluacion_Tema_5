@@ -1,6 +1,7 @@
 from io import open
 import sys
 import os
+
 fichero = open("contador.txt", "a+")
 fichero.seek(0)
 contenido = fichero.readline()
@@ -23,8 +24,10 @@ try:
 except:
     print("Error: Fichero corrupto.")
 
+
 def mainej2():
-    eleccion = str(input("\n\n¿Qué quieres hacer?\ninc = incrementar\ndec = decrementar\nsal = salir\n"))
+    eleccion = str(input(
+        "\n\n¿Qué quieres hacer?\ninc = incrementar\ndec = decrementar\nsal = salir\n"))
     if eleccion == "inc":
         os.system("python ejercicios/contador.py inc")
         mainej2()
