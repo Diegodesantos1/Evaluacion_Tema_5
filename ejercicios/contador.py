@@ -4,14 +4,14 @@ import os
 
 fichero = open("contador.txt", "a+")
 fichero.seek(0)
-contenido = fichero.readline()
+datos = fichero.readline()
 
-if len(contenido) == 0:
-    contenido = "0"
-    fichero.write(contenido)
+if len(datos) == 0:
+    datos = "0"
+    fichero.write(datos)
 fichero.close()
 try:
-    contador = int(contenido)
+    contador = int(datos)
     if len(sys.argv) == 2:
         if sys.argv[1] == "inc":
             contador += 1
