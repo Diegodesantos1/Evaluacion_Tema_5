@@ -1,7 +1,8 @@
-from operaciones import *
+from ejercicios.operaciones import *
 
 a, b, c, d = (10, 5, 0, "Hola")
-if __name__ == "__main__":
+
+def mainej1():
     print("{} + {} = {}".format(a, b, suma(a, b)))
     print("{} - {} = {}".format(b, d, resta(b, d)))
     print("{} * {} = {}".format(b, b, producto(b, b)))
