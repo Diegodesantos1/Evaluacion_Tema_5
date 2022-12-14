@@ -6,4 +6,35 @@ En este [repositorio](https://github.com/Diegodesantos1/Evaluacion_Tema_5) queda
 
 ![image](https://user-images.githubusercontent.com/91721855/207654234-d14efb14-d4df-41a0-a531-d3619b24625b.png)
 
-El código empleado es el siguiente:
+El código empleado en operaciones es el siguiente:
+
+```python
+def suma(a, b):
+    try:
+        return a+b
+    except TypeError:
+        print("Error: Tipo de dato no válido")
+
+
+def resta(a, b):
+    try:
+        return a-b
+    except TypeError:
+        print("Error: Tipo de dato no válido")
+
+
+def producto(a, b):
+    try:
+        return a*b
+    except TypeError:
+        print("Error: Tipo de dato no válido")
+
+
+def division(a, b):
+    try:
+        return a/b
+    except TypeError:
+        print("Error: Tipo de dato no válido")
+    except ZeroDivisionError:
+        print("Error: No es posible dividir entre cero")
+```
