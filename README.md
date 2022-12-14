@@ -106,3 +106,79 @@ def mainej2():
 
 ![image](https://user-images.githubusercontent.com/91721855/207655415-ae7785a2-9700-479c-be18-a3da0bc79f51.png)
 
+El código empleado en el gestor es el siguiente:
+
+```python
+from io import open
+import pickle
+
+
+class Personaje:
+
+    def __init__(self, nombre, vida, ataque, defensa, alcance):
+        self.nombre = nombre
+        self.vida = vida
+        self.ataque = ataque
+        self.defensa = defensa
+        self.alcance = alcance
+
+    def __str__(self):
+        return "{} : {} vida, {} ataque, {} defensa, {} alcance".format(self.nombre, self.vida, self.ataque, self.defensa, self.alcance)
+
+
+class Gestor:
+
+    personajes = []
+
+    def __init__(self):
+        self.cargar()
+
+    def agregar(self, p):
+        for personaje_temporal in self.personajes:
+            if personaje_temporal.nombre == p.nombre:
+                return
+        self.personajes.append(p)
+        self.guardar()
+
+    def borrar(self, nombre):
+        for personaje_temporal in self.personajes:
+            if personaje_temporal.nombre == nombre:
+                self.personajes.remove(personaje_temporal)
+                self.guardar()
+                print("\nPersonaje {} borrado".format(nombre))
+                return
+
+    def mostrar(self):
+        if len(self.personajes) == 0:
+            print("El gestor está vacío")
+            return
+        for p in self.personajes:
+            print(p)
+
+    def cargar(self):
+        fichero = open("datos/personajes.pkl", "ab+")
+        fichero.seek(0)
+        try:
+            self.personajes = pickle.load(fichero)
+        except:
+            print("El fichero está vacío")
+            pass
+        finally:
+            fichero.close()
+            print("Se han cargado {} personajes".format(len(self.personajes)))
+
+    def guardar(self):
+        fichero = open("datos/personajes.pkl", "wb")
+        pickle.dump(self.personajes, fichero)
+        fichero.close()
+
+
+def mainej3():
+    gestor = Gestor()
+    gestor.agregar(Personaje("Caballero", 4, 2, 4, 2))
+    gestor.agregar(Personaje("Guerrero", 2, 4, 2, 4))
+    gestor.agregar(Personaje("Arquero", 2, 4, 1, 8))
+    gestor.mostrar()
+    gestor.borrar("Arquero")
+    gestor.mostrar()
+```
