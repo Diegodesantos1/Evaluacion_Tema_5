@@ -1,6 +1,7 @@
 from io import open
 import pickle
 
+
 class Personaje:
 
     def __init__(self, nombre, vida, ataque, defensa, alcance):
@@ -12,6 +13,7 @@ class Personaje:
 
     def __str__(self):
         return "{} : {} vida, {} ataque, {} defensa, {} alcance".format(self.nombre, self.vida, self.ataque, self.defensa, self.alcance)
+
 
 class Gestor:
 
@@ -52,12 +54,13 @@ class Gestor:
             pass
         finally:
             fichero.close()
-            print("Se han cargado {} personajes".format( len(self.personajes) ))
+            print("Se han cargado {} personajes".format(len(self.personajes)))
 
     def guardar(self):
         fichero = open('personajes.pkl', 'wb')
         pickle.dump(self.personajes, fichero)
         fichero.close()
+
 
 def mainej3():
     gestor = Gestor()
@@ -67,6 +70,7 @@ def mainej3():
     gestor.mostrar()
     gestor.borrar('Arquero')
     gestor.mostrar()
+
 
 if __name__ == "__main__":
     mainej3()
