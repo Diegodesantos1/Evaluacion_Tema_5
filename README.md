@@ -4,7 +4,7 @@ En este [repositorio](https://github.com/Diegodesantos1/Evaluacion_Tema_5) queda
 
 <h2 align = "center"> Ejercicio 1: Cálculos y Operaciones</h2>
 
-![image](https://user-images.githubusercontent.com/91721855/207654234-d14efb14-d4df-41a0-a531-d3619b24625b.png)
+![image](https://user-images.githubusercontent.com/91721855/207655563-595d378f-242a-4064-b2d7-74405fb63963.png)
 
 El código empleado en operaciones es el siguiente:
 
@@ -56,7 +56,8 @@ def mainej1():
 
 <h2 align = "center"> Ejercicio 2: Contador</h2>
 
-![image](https://user-images.githubusercontent.com/91721855/207654919-568ca91c-5834-466b-b3cc-99bf844bcba3.png)
+![image](https://user-images.githubusercontent.com/91721855/207655474-e2c61855-b098-4f70-80f4-21acd795ff48.png)
+
 
 El código empleado en contador es el siguiente:
 
@@ -100,3 +101,8 @@ def mainej2():
     elif eleccion == "sal":
         pass
 ```
+
+<h2 align = "center"> Ejercicio 3: Gestor</h2>
+
+![image](https://user-images.githubusercontent.com/91721855/207655415-ae7785a2-9700-479c-be18-a3da0bc79f51.png)
+
