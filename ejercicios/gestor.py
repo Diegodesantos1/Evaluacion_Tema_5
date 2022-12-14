@@ -12,3 +12,10 @@ class Personaje:
 
     def __str__(self):
         return "{} : {} vida, {} ataque, {} defensa, {} alcance".format(self.nombre, self.vida, self.ataque, self.defensa, self.alcance)
+
+class Gestor:
+
+    personajes = []
+
+    def __init__(self):
+        self.cargar()
