@@ -182,3 +182,24 @@ def mainej3():
     gestor.borrar("Arquero")
     gestor.mostrar()
 ```
+
+<h2 align = "center"> Ejercicio 4: Reloj</h2>
+
+![image](https://user-images.githubusercontent.com/91721855/207656726-1542f25e-9fa1-4570-81d2-0c58f663737f.png)
+
+El código empleado en el reloj es el siguiente:
+
+```python
+import datetime
+import time
+import os
+
+
+def mainej4():
+
+    while True:
+        os.system('cls')
+        tiempo = datetime.datetime.now()
+        print(tiempo.hour, ":", tiempo.minute, ":", tiempo.second)
+        time.sleep(1)
+```
