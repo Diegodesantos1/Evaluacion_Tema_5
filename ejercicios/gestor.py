@@ -45,7 +45,7 @@ class Gestor:
             print(p)
 
     def cargar(self):
-        fichero = open('personajes.pkl', 'ab+')
+        fichero = open("datos/personajes.pkl", "ab+")
         fichero.seek(0)
         try:
             self.personajes = pickle.load(fichero)
@@ -57,20 +57,16 @@ class Gestor:
             print("Se han cargado {} personajes".format(len(self.personajes)))
 
     def guardar(self):
-        fichero = open('personajes.pkl', 'wb')
+        fichero = open("datos/personajes.pkl", "wb")
         pickle.dump(self.personajes, fichero)
         fichero.close()
 
 
 def mainej3():
     gestor = Gestor()
-    gestor.agregar(Personaje('Caballero', 4, 2, 4, 2))
-    gestor.agregar(Personaje('Guerrero', 2, 4, 2, 4))
-    gestor.agregar(Personaje('Arquero', 2, 4, 1, 8))
+    gestor.agregar(Personaje("Caballero", 4, 2, 4, 2))
+    gestor.agregar(Personaje("Guerrero", 2, 4, 2, 4))
+    gestor.agregar(Personaje("Arquero", 2, 4, 1, 8))
     gestor.mostrar()
-    gestor.borrar('Arquero')
+    gestor.borrar("Arquero")
     gestor.mostrar()
-
-
-if __name__ == "__main__":
-    mainej3()

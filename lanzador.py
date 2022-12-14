@@ -2,6 +2,7 @@ import os
 from introducir.numero import solicitar_introducir_numero_extremo
 from ejercicios.calculos import mainej1
 from ejercicios.contador import mainej2
+from ejercicios.gestor import mainej3
 from ejercicios.reloj import mainej4
 from colorama import Fore
 
@@ -20,7 +21,7 @@ def lanzador():
         lanzador()
     elif eleccion == 3:
         os.system("cls")
-        pass
+        mainej3()
     elif eleccion == 4:
         mainej4()
     elif eleccion == 5:

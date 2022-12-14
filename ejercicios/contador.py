@@ -2,7 +2,7 @@ from io import open
 import sys
 import os
 
-fichero = open("contador.txt", "a+")
+fichero = open("datos/contador.txt", "a+")
 fichero.seek(0)
 datos = fichero.readline()
 
@@ -18,7 +18,7 @@ try:
         elif sys.argv[1] == "dec":
             contador -= 1
     print("Contador: " + str(contador))
-    fichero = open("contador.txt", "w")
+    fichero = open("datos/contador.txt", "w")
     fichero.write(str(contador))
     fichero.close()
 except:
